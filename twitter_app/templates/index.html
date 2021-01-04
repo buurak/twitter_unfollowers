@@ -10,12 +10,18 @@
 <body>
 
 <div class="main">
-    <form method="POST">
-        {% comment %} {{ form.user_input(placeholder="Username", type="text", class="form-control") }} {% endcomment %}
+    {% comment %} <form method="post">
+        <input type="text">
         {{ form }}
         <br>
         <button class="btn btn-primary" type="submit">Search</button>
+    </form> {% endcomment %}
+    <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
     </form>
+
 
     {% if unfollowers_list %}
 
