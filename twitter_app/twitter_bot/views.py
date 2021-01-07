@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import tweepy
+import tweepy, requests
 import sys, requests, json, time, os
 from django.contrib.messages.views import messages
 from .forms import InputForm
@@ -66,4 +66,4 @@ def unfollowers(request):
 def diff(li1, li2):
     return (list(list(set(li1)-set(li2)) + list(set(li2)-set(li1))))
 
-     
+    

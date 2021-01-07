@@ -1,0 +1,72 @@
+import tweepy, json
+import pandas as pd
+from twython import Twython
+
+CONSUMER_KEY="xPa3iujBCOf0300woCHQfE58e"
+CONSUMER_SECRET="14cEe4bDmFu5mgrR9TDfzRutB2lyX1jUoo0dtSmZcNDkvzuGs9"
+ACCESS_TOKEN="430705716-WaHxFfwoo2ecLE0Op2Y5huR2eGO0IMHhRtrlaFuo"
+ACCESS_TOKEN_SECRET="RIm4Fekh3ysiFMlXJkd8EO0CLSz9h6I7KrbPwwVu9E7G4"
+
+# auth = tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
+# auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+# api = tweepy.API(auth)
+
+twitter = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+
+def unfollow_all():
+    r = twitter.get_friends_ids()
+    for i in r['ids']:
+        twitter.destroy_friendship(id=str(i))
+
+a = list((527853279,
+315725546,
+1042433814742614016,
+1292006784,
+315959555,
+3426415875,
+3980582774,
+4307027357,
+187112050,
+854857192079581188,
+422861505,
+2298453350,
+1243292871828144136,
+1190346911343091712,
+938475939880677376,
+4705729234,
+1147321093990039552,
+947940282225618944,
+1207345409917685763,
+2918608078,
+1062487960506060807,
+82188357,
+212014833,
+1465612656,
+103264861,
+2974933342,
+55852657,
+400585782,
+1281330943287078914,
+78411332,
+52485119,
+259298004,
+1139171673029206016,
+2779206725,
+2321286476,
+310818636,
+2845235003,
+733995166692966400,
+326410053,
+331638421,)
+)
+def follow_all():
+    twitter.create_friendship('326410053'))
+
+follow_all()
+
+def delete_tweets():
+    twitter.destroy_status(id=str(id))
+
+
+def unfav():
+    twitter.destroy_favorite(id=str(id))
